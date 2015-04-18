@@ -1,0 +1,11 @@
+z1=0;
+p1=[0.5+0.866i,0.5-0.866i];
+[num1,den1]=zp2tf(z1,p1,1);
+zplane(num1,den1);
+s=randn(1,1000);
+s1=filter(num1,den1,s);
+figure;
+subplot(311),plot(s),
+subplot(313),plot(s1),
+subplot(312),;
+zplane(num1,den1)

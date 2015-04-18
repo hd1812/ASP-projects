@@ -1,0 +1,14 @@
+function u=dmc_u(e)
+    maximum=60;
+    minimum=1;
+    max_u=0.5;
+    min_u=0.01;
+    e_square=e(end)^2;
+    if e_square>maximum
+        u=max_u;
+    elseif e_square>minimum
+        u=(max_u-min_u)/(maximum-minimum)*e_square;
+    else
+        u=min_u;
+    end
+end
